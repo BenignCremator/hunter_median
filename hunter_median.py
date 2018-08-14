@@ -15,7 +15,7 @@ def hunter_median(data_set):
         if x > maxi: maxi = x
         if x < mini: mini = x
 
-    mid_point = (high_num + low_num) / 2.0
+    mid_point = (maxi + mini) / 2.0
 
     high_total, low_total = 0, 0
     high_num, low_num = 0, 0
@@ -34,4 +34,4 @@ def hunter_median(data_set):
     low_med1 = (maxi - mini) / (low_num / total_num)
     low_med2 = (high_ave - low_ave) / (low_num / total_num)
 
-    return (high_med1, high_med2, low_med1, low_med2)
+    return (high_ave, high_med2, low_ave, low_med2)
